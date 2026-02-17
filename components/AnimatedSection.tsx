@@ -1,8 +1,12 @@
-
 "use client";
 import { motion } from "framer-motion";
+import { ReactNode } from "react";
 
-export default function AnimatedSection({ children }) {
+type AnimatedSectionProps = {
+  children: ReactNode;
+};
+
+export default function AnimatedSection({ children }: AnimatedSectionProps) {
   return (
     <motion.section
       initial={{ opacity: 0, y: 40 }}
