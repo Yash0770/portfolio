@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 
 const projects = [
   {
@@ -29,32 +32,68 @@ const projects = [
 export default function Projects() {
   return (
     <section id="projects" className="py-20 px-4 max-w-6xl mx-auto">
-      <h2 className="text-3xl font-bold mb-10">Projects</h2>
+      {/* Title Animation */}
+      <motion.h2
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="text-3xl font-bold mb-10"
+      >
+        Projects
+      </motion.h2>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      {/* Grid Animation */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={{
+          hidden: {},
+          visible: {
+            transition: {
+              staggerChildren: 0.12,
+            },
+          },
+        }}
+        className="grid md:grid-cols-2 gap-8"
+      >
         {projects.map((project) => (
-          <div
+          <motion.div
             key={project.title}
-            className="p-6 border rounded-xl hover:shadow-lg transition"
+            variants={{
+              hidden: { opacity: 0, y: 40 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            whileHover={{
+              y: -8,
+              boxShadow: "0px 20px 40px rgba(0,0,0,0.15)",
+            }}
+            transition={{ type: "spring", stiffness: 180 }}
+            className="p-6 border rounded-xl bg-white dark:bg-gray-900 transition"
           >
-            <h3 className="text-xl font-semibold">{project.title}</h3>
+            <h3 className="text-xl font-semibold">
+              {project.title}
+            </h3>
+
             <p className="mt-3 text-gray-600 dark:text-gray-300">
               {project.description}
             </p>
 
             <div className="mt-4 flex flex-wrap gap-2">
               {project.tech.map((t) => (
-                <span
+                <motion.span
                   key={t}
-                  className="text-xs px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full"
+                  whileHover={{ scale: 1.1 }}
+                  className="text-xs px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full cursor-default"
                 >
                   {t}
-                </span>
+                </motion.span>
               ))}
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

@@ -1,28 +1,44 @@
+"use client";
+
+import { motion } from "framer-motion";
 
 const skills = [
-  "HTML", "CSS", "JavaScript", "TypeScript",
-  "React.js", "Next.js", "Tailwind CSS",
-  "Node.js", "Express.js", "MongoDB",
-  "WebSocket", "Socket.IO", "Redux", "Redux Toolkit",
-  "Firebase", "Azure", "Git", "Vercel",
+  "React", "Next.js", "TypeScript", "Tailwind",
+  "Node.js", "MongoDB", "WebSockets", "Redux",
+  "Azure", "Git",
 ];
 
 export default function Skills() {
   return (
     <section id="skills" className="py-20 px-4 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold mb-8">Skills</h2>
+        <h2 className="text-3xl font-bold mb-10">Skills</h2>
 
-        <div className="flex flex-wrap gap-3">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            visible: {
+              transition: { staggerChildren: 0.08 },
+            },
+          }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-6"
+        >
           {skills.map((skill) => (
-            <span
+            <motion.div
               key={skill}
-              className="px-4 py-2 bg-white dark:bg-gray-800 border rounded-lg text-sm"
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              whileHover={{ y: -6, scale: 1.05 }}
+              className="p-4 bg-white dark:bg-gray-800 rounded-xl text-center shadow-sm cursor-pointer"
             >
               {skill}
-            </span>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
