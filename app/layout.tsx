@@ -13,8 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Yash Solanki",
-  description: "Portfolio",
+  title: "Yash | Frontend Developer",
+  description: "Frontend Developer specializing in React & Next.js",
+  keywords: ["Next.js", "React", "Frontend Developer"],
+  openGraph: {
+    title: "Yash Portfolio",
+    images: ["/images/og.png"],
+  },
 };
 
 export default function RootLayout({
