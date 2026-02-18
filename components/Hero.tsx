@@ -24,11 +24,11 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="py-24 flex items-center px-6 pt-32 md:pt-40">
+      className="md:py-24 flex items-center px-6 pt-32 md:pt-40">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center px-4">
         
         {/* TEXT SECTION */}
-        <div className="space-y-6">
+        <div className="space-y-3 md:space-x-6">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight">
             Hi, I’m{" "}
             <span className="text-blue-500">Yash Solanki</span>

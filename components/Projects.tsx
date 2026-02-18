@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Styx Sports (Live Project)",
+    title: "Styx Sports (Live Sports)",
     description:
       "Live sports streaming platform with real-time scores, animations, and SSR using Next.js & TypeScript.",
     tech: ["Next.js", "TypeScript", "WebSockets", "Tailwind"],
@@ -36,7 +36,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 px-4 md:px-8 max-w-7xl mx-auto">
+    <section id="projects" className="py-10 md:py-20 px-4 md:px-8 max-w-7xl mx-auto">
       {/* Title Animation */}
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
