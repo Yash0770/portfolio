@@ -10,7 +10,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-10 md:py-20 bg-gray-100 dark:bg-gray-900">
+    <section id="skills" className="py-10 md:py-20 bg-gray-100 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 md:px-7">
         <h2 className="text-3xl font-bold mb-10">Skills</h2>
 
@@ -33,7 +33,7 @@ export default function Skills() {
                 visible: { opacity: 1, y: 0 },
               }}
               whileHover={{ y: -6, scale: 1.05 }}
-              className="p-3 md:p-4 bg-white dark:bg-gray-800 rounded-xl text-center shadow-sm cursor-pointer text-blue-500 dark:text-white font-medium"
+              className="p-3 md:p-4 bg-white dark:bg-gray-900 rounded-xl text-center shadow-sm cursor-pointer text-blue-500 dark:text-white font-medium"
             >
               {skill}
             </motion.div>
