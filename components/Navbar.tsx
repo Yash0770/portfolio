@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const navItems = [
-  { label: "Home", href: "#home" },
+  // { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
@@ -31,7 +31,7 @@ export default function Navbar() {
             <a
               key={item.label}
               href={item.href}
-              className="relative group text-lg font-medium"
+              className="relative group text-lg font-semibold"
             >
               {item.label}
               <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-blue-500 transition-all group-hover:w-full" />
