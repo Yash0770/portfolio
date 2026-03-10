@@ -29,7 +29,7 @@ export default function Hero() {
         
         {/* TEXT SECTION */}
         <div className="space-y-3 md:space-x-6">
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
             Hi, I’m{" "}
             <span className="text-blue-500">Yash Solanki</span>
           </h1>

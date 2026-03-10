@@ -78,7 +78,7 @@ export default function Projects() {
             transition={{ type: "spring", stiffness: 180 }}
             className="p-6 border rounded-xl bg-white dark:bg-gray-900 transition cursor-pointer"
           >
-            <h3 className="text-xl font-semibold">
+            <h3 className="text-xl font-semibold text-blue-500 dark:text-white">
               {project.title}
             </h3>
 
