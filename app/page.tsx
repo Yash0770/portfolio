@@ -9,12 +9,14 @@ import Skills from "@/components/Skills";
 export default function Home() {
   return (
     <>
+    <main className="bg-gray-100 dark:bg-black min-h-screen">
       <Hero/>
       <AnimatedSection><About /></AnimatedSection>
       <AnimatedSection delay={0.1}><Skills /></AnimatedSection>
       <AnimatedSection delay={0.2}><Projects /></AnimatedSection>
       <AnimatedSection delay={0.3}><Resume /></AnimatedSection>
       <AnimatedSection delay={0.4}><Contact /></AnimatedSection>
+    </main>
     </>
   );
 }
