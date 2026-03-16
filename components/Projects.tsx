@@ -35,10 +35,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section
-      id="projects"
-      className="py-10 md:py-20 px-4 md:px-8 max-w-7xl mx-auto"
-    >
+    <section id="projects" className="py-10 md:py-20 px-4 max-w-7xl mx-auto">
       {/* Title Animation */}
       <motion.h2
         initial={{ opacity: 0, y: 30 }}

@@ -19,7 +19,7 @@ export default function Navbar() {
       transition={{ duration: 0.6 }}
       className="fixed top-0 left-0 w-full z-50 backdrop-blur bg-[#f3f4f680] dark:bg-black/60"
     >
-      <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="#home" className="text-2xl font-bold">
           Yash<span className="text-blue-500">.</span>

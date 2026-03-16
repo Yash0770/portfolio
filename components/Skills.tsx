@@ -40,7 +40,7 @@ const skills = [
 export default function Skills() {
   return (
     <section id="skills" className="py-10 md:py-20 bg-white dark:bg-gray-800">
-      <div className="max-w-7xl mx-auto px-4 md:px-7">
+      <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-3xl font-bold mb-10">Skills</h2>
 
         <motion.div

@@ -1,10 +1,13 @@
 export default function Contact() {
   return (
-    <section id="contact" className="py-10 md:py-20 px-4 max-w-4xl mx-auto text-center">
+    <section
+      id="contact"
+      className="py-10 md:py-20 px-4 max-w-4xl mx-auto text-center"
+    >
       <h2 className="text-3xl font-bold">Contact</h2>
 
       <p className="mt-4 text-gray-600 dark:text-gray-300 md:text-lg">
-        Feel free to reach out for collaborations or opportunities. 
+        Feel free to reach out for collaborations or opportunities.
       </p>
 
       <div className="mt-6 space-y-2 md:text-lg">
