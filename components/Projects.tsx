@@ -72,11 +72,12 @@ export default function Projects() {
             }}
             onClick={() => window.open(project.link, "_blank")}
             whileHover={{
-              y: -8,
-              boxShadow: "0px 20px 40px rgba(0,0,0,0.15)",
+              y: -3,
+              // boxShadow: "0px 10px 20px rgba(0,0,0,0.05)",
+              scale: 1.05
             }}
             transition={{ type: "spring", stiffness: 180 }}
-            className="p-6 border rounded-xl bg-white dark:bg-gray-900 transition cursor-pointer"
+            className="p-6 bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 transition cursor-pointer"
           >
             <h3 className="text-xl font-semibold text-blue-500 dark:text-white">
               {project.title}
