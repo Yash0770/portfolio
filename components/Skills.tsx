@@ -8,7 +8,7 @@ import {
   FaJs,
   FaReact,
   FaNodeJs,
-  FaGitAlt
+  FaGitAlt,
 } from "react-icons/fa";
 
 import {
@@ -18,7 +18,7 @@ import {
   SiMongodb,
   SiRedux,
   // SiMicrosoftazuredevops ,
-  SiSocketdotio
+  SiSocketdotio,
 } from "react-icons/si";
 
 const skills = [
@@ -54,21 +54,23 @@ export default function Skills() {
           }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6"
         >
-          {skills.map((skill) => { 
+          {skills.map((skill) => {
             const Icon = skill.icon;
-             return (<motion.div
-              key={skill.name}
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              whileHover={{ y: -3, scale: 1.05 }}
-             className="p-4 bg-white dark:bg-gray-900 rounded-lg text-center border border-gray-200 dark:border-gray-700 cursor-pointer text-blue-500 dark:text-white font-medium flex items-center justify-center gap-2"
-            >
-              <Icon className="text-2xl" />
-              {skill.name}
-            </motion.div>)
-            })}
+            return (
+              <motion.div
+                key={skill.name}
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                whileHover={{ y: -3, scale: 1.05 }}
+                className="p-4 bg-white dark:bg-gray-900 rounded-lg text-center border border-gray-200 dark:border-gray-700 cursor-pointer text-blue-500 dark:text-white font-medium flex items-center justify-center gap-2"
+              >
+                <Icon className="text-2xl" />
+                {skill.name}
+              </motion.div>
+            );
+          })}
         </motion.div>
       </div>
     </section>
