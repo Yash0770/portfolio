@@ -24,12 +24,12 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="md:py-24 flex items-center px-6 pt-32 md:pt-40">
+      className="md:py-24 flex items-center pt-22 md:pt-40">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center px-4">
         
         {/* TEXT SECTION */}
         <div className="space-y-3 md:space-x-6">
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+          <h1 className="text-3xl md:text-5xl font-bold leading-tight whitespace-nowrap">
             Hi, I’m{" "}
             <span className="text-blue-500">Yash Solanki</span>
           </h1>
@@ -50,22 +50,22 @@ export default function Hero() {
             </AnimatePresence>
           </div>
 
-          <p className="text-gray-600 dark:text-gray-400 max-w-xl">
+          <p className="text-gray-600 dark:text-gray-400 max-w-xl text-justify">
             I build high-performance, scalable web applications with modern
             technologies like React, Next.js, Node.js, and MongoDB.
           </p>
 
-          <div className="flex gap-4 flex-wrap">
+          <div className="flex gap-4 items-center">
             <a
               href="#projects"
-              className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:scale-105 transition"
+              className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:scale-105 transition whitespace-nowrap"
             >
               View Projects
             </a>
 
             <a
               href="/YashSolanki_Resume.pdf"
-              className="px-6 py-3 border rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+              className="px-6 py-3 border rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition whitespace-nowrap"
             >
               Download Resume
             </a>
@@ -74,7 +74,7 @@ export default function Hero() {
 
         {/* IMAGE SECTION – COMPLETELY STATIC */}
         <div className="flex justify-center">
-          <div className="relative w-72 h-72 rounded-full overflow-hidden border-4 border-blue-500 shadow-xl">
+          <div className="relative w-50 h-50 sm:w-52 sm:h-52 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-4 border-blue-500 shadow-xl">
             <Image
               src="/images/profile.png"
               alt="Yash Solanki"

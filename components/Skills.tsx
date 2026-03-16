@@ -41,7 +41,7 @@ export default function Skills() {
   return (
     <section id="skills" className="py-10 md:py-20 bg-white dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-10">Skills</h2>
+        <h2 className="text-3xl font-bold mb-8 md:mb-10">Skills</h2>
 
         <motion.div
           initial="hidden"
@@ -64,9 +64,9 @@ export default function Skills() {
                   visible: { opacity: 1, y: 0 },
                 }}
                 whileHover={{ y: -3, scale: 1.05 }}
-                className="p-4 bg-white dark:bg-gray-900 rounded-lg text-center border border-gray-200 dark:border-gray-700 cursor-pointer text-blue-500 dark:text-white font-medium flex items-center justify-center gap-2"
+                className="p-4 bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 cursor-pointer text-blue-500 dark:text-white font-medium flex items-center justify-start md:justify-center gap-2 text-left md:text-center"
               >
-                <Icon className="text-2xl" />
+                <Icon className="text-xl md:text-2xl" />
                 {skill.name}
               </motion.div>
             );
