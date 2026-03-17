@@ -12,28 +12,28 @@ const navItems = [
 ];
 
 export default function Navbar() {
-const [active, setActive] = useState("about");
+  const [active, setActive] = useState("about");
 
-useEffect(() => {
-  const handleScroll = () => {
-    const sections = ["about", "skills", "projects", "contact"];
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["about", "skills", "projects", "contact"];
 
-    for (const sec of sections) {
-      const el = document.getElementById(sec);
-      if (!el) continue;
+      for (const sec of sections) {
+        const el = document.getElementById(sec);
+        if (!el) continue;
 
-      const rect = el.getBoundingClientRect();
+        const rect = el.getBoundingClientRect();
 
-      if (rect.top <= 150 && rect.bottom >= 150) {
-        setActive(sec);
-        break;
+        if (rect.top <= 150 && rect.bottom >= 150) {
+          setActive(sec);
+          break;
+        }
       }
-    }
-  };
+    };
 
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <motion.header
@@ -50,26 +50,26 @@ useEffect(() => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8">
-        {navItems.map((item) => {
-          const id = item.href.replace("#", "");
+          {navItems.map((item) => {
+            const id = item.href.replace("#", "");
 
-          return (
-            <a
-              key={item.label}
-              href={item.href}
-              className={`relative group text-base font-medium text-black dark:text-gray-400 hover:text-blue-500 dark:hover:text-white ${
-                active === id ? "text-blue-500 dark:text-white" : ""
-              }`}
-            >
-              {item.label}
-              {/* <span
+            return (
+              <a
+                key={item.label}
+                href={item.href}
+                className={`relative group text-base font-medium text-black dark:text-gray-400 hover:text-blue-500 dark:hover:text-white ${
+                  active === id ? "text-blue-500 dark:text-white" : ""
+                }`}
+              >
+                {item.label}
+                {/* <span
                 className={`absolute left-0 -bottom-1 h-[2px] bg-blue-500 transition-all ${
                   active === id ? "w-full" : "w-0 group-hover:w-full"
                 }`}
               /> */}
-            </a>
-          );
-        })}
+              </a>
+            );
+          })}
         </div>
       </nav>
     </motion.header>
