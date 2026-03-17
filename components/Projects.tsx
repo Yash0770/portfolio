@@ -42,7 +42,7 @@ export default function Projects() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-3xl font-bold mb-8 md:mb-10"
+        className="text-2xl md:text-3xl font-bold mb-8 md:mb-10"
       >
         Projects
       </motion.h2>
@@ -60,7 +60,7 @@ export default function Projects() {
             },
           },
         }}
-        className="grid md:grid-cols-2 gap-8"
+        className="grid md:grid-cols-2 gap-6 md:gap-8"
       >
         {projects.map((project) => (
           <motion.div
@@ -78,11 +78,11 @@ export default function Projects() {
             transition={{ type: "spring", stiffness: 180 }}
             className="p-4 md:p-6 bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 transition cursor-pointer"
           >
-            <h3 className="text-xl font-semibold text-blue-500 dark:text-white">
+            <h3 className="text-base md:text-lg font-semibold text-blue-500 dark:text-white">
               {project.title}
             </h3>
 
-            <p className="mt-3 text-gray-600 dark:text-gray-300">
+            <p className="text-sm md:text-base mt-3 text-gray-600 dark:text-gray-300">
               {project.description}
             </p>
 

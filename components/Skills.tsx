@@ -41,7 +41,7 @@ export default function Skills() {
   return (
     <section id="skills" className="py-10 md:py-20 bg-white dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 md:mb-10">Skills</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-8 md:mb-10">Skills</h2>
 
         <motion.div
           initial="hidden"
@@ -52,7 +52,7 @@ export default function Skills() {
               transition: { staggerChildren: 0.08 },
             },
           }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6"
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
         >
           {skills.map((skill) => {
             const Icon = skill.icon;
@@ -64,7 +64,7 @@ export default function Skills() {
                   visible: { opacity: 1, y: 0 },
                 }}
                 whileHover={{ y: -3, scale: 1.05 }}
-                className="p-4 bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 cursor-pointer text-blue-500 dark:text-white font-medium flex items-center justify-start md:justify-center gap-2 text-left md:text-center"
+                className="text-sm md:text-base p-3 md:p-4 bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 cursor-pointer text-blue-500 dark:text-white font-medium flex items-center justify-start md:justify-center gap-2 text-left md:text-center"
               >
                 <Icon className="text-xl md:text-2xl" />
                 {skill.name}

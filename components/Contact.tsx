@@ -4,13 +4,13 @@ export default function Contact() {
       id="contact"
       className="py-10 md:py-20 px-4 max-w-4xl mx-auto text-center"
     >
-      <h2 className="text-3xl font-bold">Contact</h2>
+      <h2 className="text-2xl md:text-3xl font-bold">Contact</h2>
 
-      <p className="mt-4 text-gray-600 dark:text-gray-300 md:text-lg">
+      <p className="text-sm md:text-base mt-4 text-gray-600 dark:text-gray-300">
         Feel free to reach out for collaborations or opportunities.
       </p>
 
-      <div className="mt-6 space-y-2 md:text-lg">
+      <div className="text-sm md:text-base mt-6 space-y-2">
         <p>
           Email: <span className="font-medium">yashsolanki0728@gmail.com</span>
         </p>

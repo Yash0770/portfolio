@@ -50,7 +50,7 @@ export default function Hero() {
             </AnimatePresence>
           </div>
 
-          <p className="text-gray-600 dark:text-gray-400 max-w-xl text-justify">
+          <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 max-w-xl text-justify">
             I build high-performance, scalable web applications with modern
             technologies like React, Next.js, Node.js, and MongoDB.
           </p>
@@ -58,14 +58,14 @@ export default function Hero() {
           <div className="flex gap-4 items-center">
             <a
               href="#projects"
-              className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:scale-105 transition whitespace-nowrap"
+              className="text-sm md:text-base px-6 py-3 bg-blue-600 text-white rounded-lg hover:scale-105 transition whitespace-nowrap"
             >
               View Projects
             </a>
 
             <a
               href="/YashSolanki_Resume.pdf"
-              className="px-6 py-3 border rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition whitespace-nowrap"
+              className="text-sm md:text-base px-6 py-3 border rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition whitespace-nowrap"
             >
               Download Resume
             </a>
