@@ -44,7 +44,14 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-6 md:px-4 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link href="#home" className="text-2xl font-bold">
+        <Link
+          href="#home"
+          className="text-2xl font-bold"
+          onClick={(e) => {
+            e.preventDefault();
+            window.scroll({ top: 0, behavior: "smooth" });
+          }}
+        >
           Yash<span className="text-blue-500">.</span>
         </Link>
 
