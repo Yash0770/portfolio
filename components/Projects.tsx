@@ -1,6 +1,6 @@
 "use client";
-
 import { motion } from "framer-motion";
+import { FiExternalLink } from "react-icons/fi";
 
 const projects = [
   {
@@ -76,10 +76,14 @@ export default function Projects() {
               scale: 1.05,
             }}
             transition={{ type: "spring", stiffness: 180 }}
-            className="p-4 md:p-6 bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 transition cursor-pointer"
+            className="group p-4 md:p-6 bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 transition cursor-pointer"
           >
-            <h3 className="text-base md:text-lg font-semibold text-blue-500 dark:text-white">
+            <h3 className="text-base md:text-lg font-semibold text-blue-500 dark:text-white flex items-center gap-2">
               {project.title}
+              <FiExternalLink
+                size={16}
+                className="text-gray-400 group-hover:text-blue-500 transition-colors shrink-0"
+              />
             </h3>
 
             <p className="text-sm md:text-base mt-3 text-gray-600 dark:text-gray-300">

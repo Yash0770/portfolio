@@ -64,7 +64,7 @@ export default function Skills() {
                   visible: { opacity: 1, y: 0 },
                 }}
                 whileHover={{ y: -3, scale: 1.05 }}
-                className="text-sm md:text-base p-3 md:p-4 bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 cursor-pointer text-blue-500 dark:text-white font-medium flex items-center justify-start md:justify-center gap-2 text-left md:text-center"
+                className="text-sm md:text-base p-3 md:p-4 bg-white dark:bg-[#111827] rounded-lg border border-gray-200 dark:border-gray-700 cursor-pointer text-blue-500 dark:text-white font-medium flex items-center justify-start md:justify-center gap-2 text-left md:text-center"
               >
                 <Icon className="text-xl md:text-2xl" />
                 {skill.name}
