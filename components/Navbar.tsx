@@ -1,7 +1,7 @@
 "use client";
-
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const navItems = [
   // { label: "Home", href: "#home" },
@@ -12,6 +12,29 @@ const navItems = [
 ];
 
 export default function Navbar() {
+const [active, setActive] = useState("about");
+
+useEffect(() => {
+  const handleScroll = () => {
+    const sections = ["about", "skills", "projects", "contact"];
+
+    for (const sec of sections) {
+      const el = document.getElementById(sec);
+      if (!el) continue;
+
+      const rect = el.getBoundingClientRect();
+
+      if (rect.top <= 150 && rect.bottom >= 150) {
+        setActive(sec);
+        break;
+      }
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
   return (
     <motion.header
       initial={{ y: -80, opacity: 0 }}
@@ -27,16 +50,26 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8">
-          {navItems.map((item) => (
+        {navItems.map((item) => {
+          const id = item.href.replace("#", "");
+
+          return (
             <a
               key={item.label}
               href={item.href}
-              className="relative group text-lg font-semibold"
+              className={`relative group text-base font-medium text-black dark:text-gray-400 hover:text-blue-500 dark:hover:text-white ${
+                active === id ? "text-blue-500 dark:text-white" : ""
+              }`}
             >
               {item.label}
-              <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-blue-500 transition-all group-hover:w-full" />
+              {/* <span
+                className={`absolute left-0 -bottom-1 h-[2px] bg-blue-500 transition-all ${
+                  active === id ? "w-full" : "w-0 group-hover:w-full"
+                }`}
+              /> */}
             </a>
-          ))}
+          );
+        })}
         </div>
       </nav>
     </motion.header>
