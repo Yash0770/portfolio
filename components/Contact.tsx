@@ -23,7 +23,7 @@ export default function Contact() {
             href="https://github.com/Yash0770"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline"
+            className="font-medium underline text-black decoration-black dark:text-white dark:decoration-white hover:text-blue-500 hover:decoration-blue-500 transition"
           >
             GitHub
           </a>
@@ -32,7 +32,7 @@ export default function Contact() {
             href="https://www.linkedin.com/in/yash-solanki-45a6b41bb/"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline"
+            className="font-medium underline text-black decoration-black dark:text-white dark:decoration-white hover:text-blue-500 hover:decoration-blue-500 transition"
           >
             LinkedIn
           </a>
