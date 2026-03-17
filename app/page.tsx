@@ -9,7 +9,7 @@ import Skills from "@/components/Skills";
 export default function Home() {
   return (
     <>
-    <main className="bg-gray-100 dark:bg-black min-h-screen">
+    <main className="bg-gray-100 dark:bg-[#111827] min-h-screen">
       <Hero/>
       <AnimatedSection><About /></AnimatedSection>
       <AnimatedSection delay={0.1}><Skills /></AnimatedSection>
